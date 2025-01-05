@@ -48,8 +48,8 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
-            `Welcome to the Foodmine ${user.name}`,
-            'Register Successful'
+            `Welcome to the Yummy FoodCorner ${user.name}`,
+            'Registration Successful'
           )
         },
         error: (errorResponse) => {
@@ -64,7 +64,8 @@ export class UserService {
   logout(){
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);
-    window.location.reload();
+    window.location.href = '';
+
   }
 
   private setUserToLocalStorage(user:User){

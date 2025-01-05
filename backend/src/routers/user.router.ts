@@ -20,12 +20,12 @@ router.get("/seed", asyncHandler(
  }
  ))
 
-router.post("/login",(req, res) => {
+router.post("/login", asyncHandler(
+  async (req, res) => {
     const {email, password} = req.body;
-    const user = sample_users.find(user => user.email === email
-      && user.password === password);
+    const user = await UserModel.findOne({email});
   
-     if(user){
+     if(user && (await bcrypt.compare(password, user.password))){
       res.send(generateTokenReponse(user));
      }
      else{
@@ -33,7 +33,7 @@ router.post("/login",(req, res) => {
      }
   
   }
-)
+));
   
 router.post('/register', asyncHandler(
   async (req, res) => {
@@ -64,12 +64,19 @@ router.post('/register', asyncHandler(
 
   const generateTokenReponse = (user : any) => {
     const token = jwt.sign({
-     id: user.id, email:user.email, isAdmin: user.isAdmin
-    },"some random text",{
+      id: user.id, email:user.email, isAdmin: user.isAdmin
+    },process.env.JWT_SECRET!,{
       expiresIn:"30d"
     });
-  user.token = token;
-    return user;
+  
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      address: user.address,
+      isAdmin: user.isAdmin,
+      token: token
+    };
   }
   
 

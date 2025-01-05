@@ -1,0 +1,121 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: url('src/assets/images/devpage.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Horizontally centers */
+  align-items: center; /* Vertically centers */
+  padding: 20px; /* Optional padding */
+}
+
+/* Profiles Section */
+.profiles-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: #fff;
+  border: 2px solid rgb(241, 38, 72);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(233, 58, 125, 0.1);
+  padding: 20px;
+  margin: 20px 30px;
+  max-width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border:0.2rem solid rgb(240, 56, 87);
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Name */
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Profile Title */
+.profile-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Profile Bio */
+.profile-bio {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.social-link.linkedin {
+  background-color: #0077b5;
+}
+
+.social-link.github {
+  background-color: #333;
+}
+
+.social-link:hover {
+  background-color: #0056b3;
+}
+
+.social-link.github:hover {
+  background-color: #222;
+}
+

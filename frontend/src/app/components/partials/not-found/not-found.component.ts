@@ -13,7 +13,7 @@ export class NotFoundComponent implements OnInit {
   @Input()
   resetLinkText = "Reset";
   @Input()
-  resetLinkRoute = "/";
+  resetLinkRoute = "/home";
   constructor() { }
 
   ngOnInit(): void {

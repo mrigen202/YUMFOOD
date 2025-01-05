@@ -122,3 +122,14 @@ li .remove-button:hover{
   opacity: 1;
   cursor: pointer;
 }
+
+.footer-cart{
+  position:relative;
+  margin-bottom:500px;
+  background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    height:auto;
+
+}

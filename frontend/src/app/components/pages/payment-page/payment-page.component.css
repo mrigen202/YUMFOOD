@@ -38,3 +38,16 @@
   margin: 2rem;
   width: 35rem;
 }
+
+a{
+  box-sizing:border-box;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  background-color:lightgrey;
+  height: 1.5rem;
+  opacity: 0.8;
+  margin: 20px 40px 0px -90px;
+  opacity: 0.9;
+  border-bottom: 1px solid lightgrey;
+}

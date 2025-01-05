@@ -12,6 +12,7 @@ export class LoginPageComponent implements OnInit {
   loginForm!:FormGroup;
   isSubmitted = false;
   returnUrl = '';
+  passwordFieldType: "email" | "text" | "password" = "email";
   constructor(private formBuilder: FormBuilder
     , private userService:UserService,
      private activatedRoute:ActivatedRoute,
@@ -36,8 +37,10 @@ export class LoginPageComponent implements OnInit {
 
     this.userService.login({email:this.fc.email.value,
        password: this.fc.password.value}).subscribe(() => {
-         this.router.navigateByUrl(this.returnUrl);
+         this.router.navigate(['/home']);
        });
   }
-
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+  }
 }

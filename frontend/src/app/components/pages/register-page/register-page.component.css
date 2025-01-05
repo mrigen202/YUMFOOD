@@ -1,17 +1,100 @@
-.container{
+body {
+  background: url('src/assets/images/hello.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Container */
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  margin-top: 3rem;
+  min-height: 80vh;
+  padding: 10px;
 }
 
-.details{
-  width: 25rem;
+/* Card Styling */
+.details {
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  padding: 20px 25px; /* Reduced padding */
+  border-radius: 10px; /* Slightly smaller radius */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Reduced shadow */
+  max-width: 400px; /* Reduced width */
+  width: 90%; /* Adjusts for smaller screens */
 }
 
-.login{
+/* Title */
+app-title {
+  display: block;
+  text-align: center;
+  font-size: 18px; /* Smaller font size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+/* Form Styling */
+form {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap */
 }
+
+text-input {
+  display: block;
+}
+
+text-input input {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Slightly smaller radius */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+text-input input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4); /* Reduced shadow intensity */
+  outline: none;
+}
+
+/* Button */
+default-button {
+  display: block;
+  text-align: center;
+}
+
+default-button button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border: none;
+  border-radius: 6px; /* Slightly smaller radius */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+default-button button:hover {
+  background: #0056b3;
+}
+
+/* Login Link */
+.login {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px; /* Smaller font size */
+}
+
+.login a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+

@@ -21,7 +21,7 @@ export const FoodSchema = new Schema<Food>(
         stars: {type: Number, required:true},
         imageUrl: {type: String, required:true},
         origins: {type: [String], required:true},
-        cookTime: {type: String, required:true}
+        cookTime: {type: String, required:false}
     },{
         toJSON:{
             virtuals: true

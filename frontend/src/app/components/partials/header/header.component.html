@@ -4,7 +4,8 @@
   <nav>
     <ul>
       <li *ngIf="!isAuth">
-        <a routerLink="/login">Login</a>
+        <a routerLink="/about-dev">DEVELOPERS</a>
+        <a routerLink="Settings">⚙️</a>
       </li>
       <li  *ngIf="isAuth"class="menu-container">
         <a routerLink="/dashboard">{{user.name}}</a>
