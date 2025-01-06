@@ -1,9 +1,14 @@
 <header>
   <div class="container">
   <a routerLink="/" class="Logo"> 🍓<span class="yummy">YUMMY</span> food Corner</a>
+  <a><marquee direction="left" class="fancy-marquee">
+    Welcome to <span>Yummy</span> Food Corner
+  </marquee>
+  </a>
   <nav>
     <ul>
       <li *ngIf="!isAuth">
+
         <a routerLink="/about-dev">DEVELOPERS</a>
         <a routerLink="Settings">⚙️</a>
       </li>

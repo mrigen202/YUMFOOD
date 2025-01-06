@@ -61,3 +61,16 @@ a span{
   min-width: 8rem;
 
 }
+.fancy-marquee {
+  font-size: 1.5rem; /* Larger text size */
+  font-weight: bold; /* Bold text */
+  color: black; /* White text */
+
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+  animation: glow 2s infinite alternate; /* Glow effect */
+}
+
+
